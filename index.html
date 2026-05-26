@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind | Full Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>☕ The Daily Grind</h1>
+        <p>Freshly brewed, delivered to your desk.</p>
+    </header>
+
+    <main class="container">
+        <!-- Menu Section -->
+        <section class="menu-section">
+            
+            <!-- Category 1: Hot Espresso -->
+            <h2>🔥 Hot Espresso</h2>
+            <div class="menu-grid">
+                <div class="coffee-card">
+                    <div class="coffee-emoji">☕</div>
+                    <h3>Classic Espresso</h3>
+                    <p class="description">Rich, bold, and concentrated shot of pure espresso.</p>
+                    <p class="price">$3.50</p>
+                    <button class="add-btn" onclick="addToCart('Classic Espresso', 3.50)">Add to Order</button>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🥛</div>
+                    <h3>Cafe Latte</h3>
+                    <p class="description">Smooth espresso balanced with steamed milk and light foam.</p>
+                    <p class="price">$4.50</p>
+                    <button class="add-btn" onclick="addToCart('Cafe Latte', 4.50)">Add to Order</button>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-emoji">☁️</div>
+                    <h3>Cappuccino</h3>
+                    <p class="description">Equal parts espresso, steamed milk, and heavy milk foam.</p>
+                    <p class="price">$4.50</p>
+                    <button class="add-btn" onclick="addToCart('Cappuccino', 4.50)">Add to Order</button>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🍯</div>
+                    <h3>Caramel Macchiato</h3>
+                    <p class="description">Steamed milk marked with espresso and drizzled with sweet caramel.</p>
+                    <p class="price">$5.25</p>
+                    <button class="add-btn" onclick="addToCart('Caramel Macchiato', 5.25)">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- Category 2: Iced & Blended -->
+            <h2 style="margin-top: 3rem;">❄️ Cold Brew & Iced</h2>
+            <div class="menu-grid">
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🍫</div>
+                    <h3>Iced Mocha</h3>
+                    <p class="description">Espresso blended with dark chocolate syrup, cold milk, and ice.</p>
+                    <p class="price">$5.00</p>
+                    <button class="add-btn" onclick="addToCart('Iced Mocha', 5.00)">Add to Order</button>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🧊</div>
+                    <h3>Nitro Cold Brew</h3>
+                    <p class="description">Slow-steeped cold brew infused with nitrogen for a creamy head.</p>
+                    <p class="price">$4.75</p>
+                    <button class="add-btn" onclick="addToCart('Nitro Cold Brew', 4.75)">Add to Order</button>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🍵</div>
+                    <h3>Iced Matcha Latte</h3>
+                    <p class="description">Pure stone-ground Japanese matcha whisked with cold milk over ice.</p>
+                    <p class="price">$5.50</p>
+                    <button class="add-btn" onclick="addToCart('Iced Matcha Latte', 5.50)">Add to Order</button>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🍋</div>
+                    <h3>Iced Berry Hibiscus</h3>
+                    <p class="description">Refreshing herbal hibiscus tea shaken with ice and real berries.</p>
+                    <p class="price">$4.25</p>
+                    <button class="add-btn" onclick="addToCart('Iced Berry Hibiscus', 4.25)">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- Category 3: Bakery -->
+            <h2 style="margin-top: 3rem;">🥐 Fresh Bakery</h2>
+            <div class="menu-grid">
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🥐</div>
+                    <h3>Butter Croissant</h3>
+                    <p class="description">Flaky, golden, and layered with rich French butter.</p>
+                    <p class="price">$3.75</p>
+                    <button class="add-btn" onclick="addToCart('Butter Croissant', 3.75)">Add to Order</button>
+                </div>
+                <div class="coffee-card">
+                    <div class="coffee-emoji">🧁</div>
+                    <h3>Blueberry Muffin</h3>
+                    <p class="description">Moist muffin packed with wild blueberries and a crumble topping.</p>
+                    <p class="price">$3.50</p>
+                    <button class="add-btn" onclick="addToCart('Blueberry Muffin', 3.50)">Add to Order</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Sidebar Cart Section -->
+        <section class="cart-section">
+            <h2>Your Order</h2>
+            <div id="cart-items">
+                <p class="empty-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-total">
+                <strong>Total:</strong> $<span id="total-price">0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Place Order</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
